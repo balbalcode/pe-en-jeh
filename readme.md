@@ -71,6 +71,10 @@ Seriously, **NO QUESTION IS A STUPID QUESTION**. Kalau ada yang:
 
 > 💡 **Pro Tip:** Bertanya di issue juga membantu teman-teman lain yang mungkin punya pertanyaan yang sama!
 
+> masih bingung cara nanya? tonton video aja deh gapapa ini dah ada video caranya
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Demo-red)](https://youtube.com/watch?v=wkwkbelumdibikin)
+
+
 ## 🤝 Kontribusi
 
 Menemukan kesalahan? Punya ide untuk memperbaiki materi? 
