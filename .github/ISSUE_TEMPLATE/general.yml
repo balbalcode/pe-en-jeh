@@ -1,26 +1,41 @@
----
 name: anonim boleeeeeh guys
-about: Tanya tentang materi kuliah, konsep yang belum jelas, atau diskusi umum
-title: "[TANYA] Fill it here
-labels: question
----
+description: Tanya tentang materi kuliah, konsep yang belum jelas, atau diskusi umum
+title: "[TANYA] "
+labels: ["question"]
 
-## 📚 Tentang Materi Apa?
-<!-- Sebutkan week atau topik yang ingin ditanyakan, misal: Week 1 - Software Quality -->
+body:
+  - type: textarea
+    id: materi
+    attributes:
+      label: "📚 Tentang Materi Apa?"
+      description: "Sebutkan week atau topik yang ingin ditanyakan, misal: Week 1 - Software Quality"
+      placeholder: "Contoh: Week 2 - McCall’s Quality Model"
+    validations:
+      required: true
 
+  - type: textarea
+    id: pertanyaan
+    attributes:
+      label: "❓ Pertanyaan Kamu"
+      description: "Tulis pertanyaan kamu di sini. Jangan malu, ga ada pertanyaan yang bodoh!"
+      placeholder: "Aku masih bingung bedanya fault dan failure itu gimana ya?"
+    validations:
+      required: true
 
-## ❓ Pertanyaan Kamu
-<!-- Tulis pertanyaan kamu di sini. Jangan malu, ga ada pertanyaan yang bodoh! -->
+  - type: textarea
+    id: pemahaman
+    attributes:
+      label: "🤔 Yang Sudah Kamu Coba Pahami (Opsional)"
+      description: "Ceritain yang udah kamu pahami sejauh ini, supaya kita bisa jelasin dari sudut yang tepat."
+      placeholder: "Aku ngerti fault itu kesalahan kode, tapi masih bingung kaitannya sama error..."
+    validations:
+      required: false
 
-
-## 🤔 Yang Sudah Kamu Coba Pahami
-
-<!-- 
-Opsional: Ceritain yang udah kamu pahami sejauh ini, supaya kita bisa jelasin dari sudut yang tepat.
-Atau skip aja kalau emang bener-bener bingung dari awal 😄
--->
-
-
-## 📸 Screenshot / Contoh (Opsional)
-
-<!-- Kalau ada screenshot, diagram, atau contoh kode yang relevan, attach di sini -->
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "📸 Screenshot / Contoh (Opsional)"
+      description: "Kalau ada screenshot, diagram, atau contoh kode yang relevan, attach di sini."
+      placeholder: "Paste kode atau jelasin contohnya..."
+    validations:
+      required: false
