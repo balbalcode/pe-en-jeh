@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 $status = $_GET['status'] ?? null;
 $username = isset($_GET['username']) ? trim((string) $_GET['username']) : '';
-$userError = ($_GET['e_user'] ?? '0') === '1';
-$pinError = ($_GET['e_pin'] ?? '0') === '1';
+$userError = ($_GET['error-uname'] ?? '0') === '1';
+$pinError = ($_GET['error-pin'] ?? '0') === '1';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ $pinError = ($_GET['e_pin'] ?? '0') === '1';
       <p class="mt-1 text-sm text-white-400">Secure access to your account</p>
 
       <?php if ($status === 'success'): ?>
-        <div class="mt-6 rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-4 text-sm text-emerald-300">
+        <div class="mt-6 rounded-lg border border-green-500/30 bg-green-500 p-4 text-sm text-white">
           <p class="font-medium">Login berhasil bal.</p>
         </div>
       <?php elseif ($status === 'error'): ?>

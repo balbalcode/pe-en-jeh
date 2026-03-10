@@ -1,11 +1,14 @@
 <?php
 
-final class LoginRetriever
+class LoginRetriever
 {
     public function retrieve(array $request): array
     {
-        $username = isset($request['login-form__username-input']) ? trim((string) $request['login-form__username-input']) : '';
-        $pin = isset($request['login-form__pin-input']) ? trim((string) $request['login-form__pin-input']) : '';
+        $rawUsername = $request['username'] ?? $request['login-form__username-input'] ?? '';
+        $rawPin = $request['pin'] ?? $request['login-form__pin-input'] ?? '';
+
+        $username = trim((string) $rawUsername);
+        $pin = trim((string) $rawPin);
 
         return [
             'username' => $username,
@@ -15,8 +18,8 @@ final class LoginRetriever
 
     public function validate(array $loginData): array
     {
-        $username = isset($loginData['login-form__username-input']) ? (string) $loginData['login-form__username-input'] : '';
-        $pin = isset($loginData['login-form__pin-input']) ? (string) $loginData['login-form__pin-input'] : '';
+        $username = (string) ($loginData['username'] ?? $loginData['login-form__username-input'] ?? '');
+        $pin = (string) ($loginData['pin'] ?? $loginData['login-form__pin-input'] ?? '');
 
         $errors = [];
 
