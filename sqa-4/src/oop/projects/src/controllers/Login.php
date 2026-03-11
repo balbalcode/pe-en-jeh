@@ -1,6 +1,5 @@
 <?php
 
-
 require_once __DIR__ . '/../models/LoginModel.php';
 
 $isSubmitted = $_SERVER['REQUEST_METHOD'] === 'POST';

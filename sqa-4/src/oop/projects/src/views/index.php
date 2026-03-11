@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 $status = $_GET['status'] ?? null;
 $username = isset($_GET['username']) ? trim((string) $_GET['username']) : '';
 $userError = ($_GET['error-uname'] ?? '0') === '1';

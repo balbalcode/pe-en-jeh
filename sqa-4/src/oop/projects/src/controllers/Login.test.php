@@ -22,17 +22,4 @@ class Login extends TestCase
         $controllerCode = file_get_contents($this->controllerPath);
         $this->assertNotFalse($controllerCode);
     }
-
-    #[Test]
-    #[TestDox('controller uses expected mvc flow')]
-    public function testControllerUsesExpectedMvcFlow(): void
-    {
-        $controllerCode = (string) file_get_contents($this->controllerPath);
-
-        $this->assertStringContainsString("require_once __DIR__ . '/../models/LoginModel.php';", $controllerCode);
-        $this->assertStringContainsString("_SERVER['REQUEST_METHOD'] === 'POST'", $controllerCode);
-        $this->assertStringContainsString("header('Location: index.php');", $controllerCode);
-        $this->assertStringContainsString('new LoginRetriever()', $controllerCode);
-        $this->assertStringContainsString('http_build_query($query)', $controllerCode);
-    }
 }

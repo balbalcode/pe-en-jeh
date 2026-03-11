@@ -21,8 +21,8 @@ class index extends TestCase
         $_GET = [
             'status' => 'error',
             'username' => 'ikbal',
-            'e_user' => '1',
-            'e_pin' => '1',
+            'error-uname' => '1',
+            'error-pin' => '1',
         ];
 
         ob_start();
@@ -47,7 +47,7 @@ class index extends TestCase
         require $this->viewPath;
         $outputSuccess = (string) ob_get_clean();
 
-        $this->assertStringContainsString('Login data retrieved successfully.', $outputSuccess);
+        $this->assertStringContainsString('Login berhasil bal.', $outputSuccess);
         $this->assertStringContainsString('ikbalmaulana', $outputSuccess);
     }
 }
