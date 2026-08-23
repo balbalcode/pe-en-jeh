@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contoh AJAX - GET</title>
+</head>
+<body>
+<div id="box"></div>
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState === 4 && xhr.status === 200){
+            console.log("berhasil");
+            data = JSON.parse(xhr.responseText);
+            document.getElementById('box').innerHTML = data.usia;
+        }
+    }
+    xhr.open('GET', 'data.json', true);
+    xhr.send();
+</script>
+</body>
+</html>

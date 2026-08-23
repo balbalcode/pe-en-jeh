@@ -1,0 +1,50 @@
+body{
+    font-family: monaco;
+    background-color: #0984e3;
+}
+h2 {
+    font-family: arial;
+    font-size: 25px;
+    color: #fff;
+}
+
+/* Button Style */
+input#submit{
+    cursor:pointer;
+    padding:5px 25px;
+    background:#74b9ff;
+    border:1px solid #0984e3;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(0,0,0, .75);
+    color:#f3f3f3;
+    font-size:18px;
+}
+
+/* Button Hover */
+input#submit:hover, input#submit:focus{
+    background-color :#0984e3;
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+/* untuk memberikan style pada semua elemen */
+table {
+  background-color: #fff;
+  padding:25px;
+  box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+table tr,td {
+  padding:10px;
+}
+
+table tr td input {
+  width:100%;
+  height:40px;
+  border:solid #e1e1e1 1px;
+  border-radius:3px;
+  padding-left:10px;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:16px;
+  background:#f9f9f9;
+  transition:0.5s;
+  box-shadow: inset 0px 0px 1px rgba(0,0,0,0.4);
+}
