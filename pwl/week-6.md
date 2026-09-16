@@ -29,7 +29,7 @@ Kode lengkap ada di [`src/week-6/`](./src/week-6/). Struktur tabel `mahasiswa` y
 
 | Kolom | Tipe |
 |-------|------|
-| `id` | `int(11)`, primary key, auto_increment |
+| `id` | `varchar(10)`, primary key, auto_increment |
 | `nama` | `varchar(50)` |
 | `nim` | `int(11)` |
 | `alamat` | `text` |
